@@ -2,7 +2,7 @@
 /* Do While Loop                                                          */
 /* ---------------------------------------------------------------------- */
 
-let i = 0;
+//let i = 0;
 
 // do {
 //   console.log(i);
@@ -17,6 +17,7 @@ let i = 0;
 //   '최초 실행된 메시지입니다. 이 메시지는 조건이 거짓이어도 볼 수 있습니다.' 출력
 // - 순환 중단
 
+/*
 let repeat = prompt('몇번 반복하시겠습니까?', '0');
 
 do {
@@ -29,6 +30,48 @@ do {
 
   repeat--;
 } while (repeat);
+*/
 
 // do ~ while 문 (순환)
 // - 위 do ~ while 문을 순방향으로 순환되도록 설정
+
+/* ---------------------------------------------------------------------- */
+
+// html의 원하는 노드타입의 코드를 콘솔에 가져오는 반복문
+
+// let first = document.querySelector('.first');
+
+// first = first.nextSibling.nextSibling.nextSibling.nextSibling;
+
+// do {
+//   first = first.nextSibling;
+// } while (first.nodeType !== document.ELEMENT_NODE);
+
+// 반복문 멈추는 시점 => 무한루프
+
+//console.log(first);
+
+/* ---------------------------------------------------------------------- */
+
+// 재사용성을 위해 함수에 넣어서 사용
+
+/* 다음 요소 찾아주는 코드
+function next(node) {
+  do {
+    node = node.nextSibling;
+  } while (node.nodeType !== 1);
+  return node;
+}
+
+const second = next(first);
+
+console.log(second);
+*/
+
+function prev(node) {
+  do {
+    node = node.previousSibling;
+  } while (node.nodeType !== 1);
+
+  return node;
+}
