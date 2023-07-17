@@ -29,7 +29,7 @@ let pop; // 뒤
 
 // 배열 요소 순환(loop)
 // for 문, for ~ of문
-
+// for (let i = 0; i < friends.length; i++)
 // 배열 복사
 let copiedArray;
 

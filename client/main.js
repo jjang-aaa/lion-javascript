@@ -1,3 +1,4 @@
+/*
 // 과제 힌트
 
 const input = document.querySelector('#todo'); // 찾아서
@@ -11,3 +12,4 @@ input.addEventListener('input', () => {
 
 input.classList.add('is-active'); // 추가하기
 input.classList.remove('is-active'); // 지우기
+*/
